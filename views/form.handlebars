@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mb-2">
             <div class="col">
                 <label class="text-white mb-2">Email address: <span>*</span>&nbsp;</label>
                 <input type="text" class="form-control mb-3 email-entry" placeholder="your@email.com"
@@ -34,19 +34,22 @@
 
                 <label class="text-white mb-2">Are you a union member? <span>*</span>&nbsp;</label>
                 <br>
-                <div class="form-check form-check-inline" id="union-entry">
+                <div class="toggle2">
+
                     <input class="form-check-input" type="radio" name="unionOptions" checked="checked" id="inlineRadio1"
                         value="yesunion">
-                    <label class="text-white form-check-label" for="inlineRadio1">Yes</label>
-                </div>
-                <div class="form-check form-check-inline">
+                    <label for="inlineRadio1">Yes</label>
+
                     <input class="form-check-input" type="radio" name="unionOptions" id="inlineRadio2" value="nounion">
-                    <label class="text-white form-check-label" for="inlineRadio2">No</label>
+                    <label for="inlineRadio2">No</label>
+
                 </div>
             </div>
         </div>
 
-        <div class="row mb-4">
+
+
+        <div class="row mb-2">
             <div class="col">
                 <label class="text-white mb-2">Sector: <span>*</span>&nbsp;</label>
                 <select id="sector-entry" class="form-select">
@@ -76,19 +79,20 @@
             </div>
         </div>
 
-        <div class="row mb-4">
+        <div class="row mb-2">
             <div class="col">
 
                 <label class="text-white mb-2">Are you a shift worker? <span>*</span>&nbsp;</label>
                 <br>
-                <div class="form-check form-check-inline" id="shift-entry">
-                    <input class="form-check-input" type="radio" name="shiftOptions" checked="checked" id="inlineRadio1"
+                <div class="toggle">
+
+                    <input class="form-check-input" type="radio" name="shiftOptions" checked="checked" id="inlineRadio3"
                         value="yesshift">
-                    <label class="text-white form-check-label" for="inlineRadio1">Yes</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="shiftOptions" id="inlineRadio2" value="noshift">
-                    <label class="text-white form-check-label" for="inlineRadio2">No</label>
+                    <label for="inlineRadio3">Yes</label>
+
+
+                    <input class="form-check-input" type="radio" name="shiftOptions" id="inlineRadio4" value="noshift">
+                    <label for="inlineRadio4">No</label>
                 </div>
             </div>
 

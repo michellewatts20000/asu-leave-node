@@ -43,16 +43,40 @@ router.post('/', async (req, res) => {
   });
 
   var mailOptions = {
-    from: '"Unpaid Overtime" <unpaidovertimecalculator@gmail.com>',
+    from: '"Natalie Lang" <membership@asu.org.au>',
     to: req.body.email,
     subject: 'Thanks for using the Workers Make the Difference calculator',
-    text: `Hey ${req.body.email}, thanks for using our unpaid overtime calculator :)`,
-    html: `<b>Hey ${req.body.email}! </b><br><br>You worked ${req.body.unpaidHours} hours for a total of $${req.body.unpaidSalary}, was it worth it?<br><br> Sign our petition to end unpaid overtime.
-      <br>
-      <br>
-       Do you know anyone else who might like using this calculator? <br>Share them this link: <a href="https://the-right-to-switch-off.herokuapp.com/">https://the-right-to-switch-off.herokuapp.com/</a><br><br> 
+    text: `Hey ${req.body.name},`,
+    html: `<b>Hey ${req.body.name}! </b><br><br>You are owed ${req.body.personal.toFixed(2)} weeks of personal leave, ${req.body.annual} weeks of annual leave, and ${req.body.long} weeks of long service leave.<br><br>
+     
+      Thank you for the work you do. Your work is essential, and you make the difference in people’ s lives. But if you have never had long service leave – you are missing out.<br>
+
+      The Australian Services Union is calling
+      for portable entitlements for all community and disability workers. We should have access to portable training, portable personal leave and portable long service leave. <br>
+
+      If we had access to portable long service leave, it would mean:<br>
+<ul>
+      <li>access to well - earned breaks to recharge;</li>
+      <li>recognition for our experience and contribution to the sector; and</li>
+      <li>experienced workers could carry their leave with them to new providers and not go back to zero leave entitlements for doing the same work with the same communities.</li>
+</ul>
+      You deserve no less than the rights and entitlements of every other worker in the Australian economy.<br>
+
+      Nurses, teachers, cleaners and builders have portable long service leave. So do community and disability workers in Victoria, Queensland and the ACT.<br>
+
+      We can’ t afford to miss out. How can we fix this? <br>
+
+      <ol>
+      <li>Join the <a href="www.asu.asn.au/asujoin">Australian Services Union.</a>
+      Membership gives you access to advice, includes free journey insurance and professional indemnity insurance.</li>
+
+     <li>Spread the word to keep up momentum. </li>
+
+     <li>Ask your colleagues at work to do the same.</li>
+
       Thanks,<br>
-      <b>The unpaid overtime team</b>`,
+      Natalie Lang</b>
+      Secretary - ASU`,
   };
 
   transport.sendMail(mailOptions, (error, info) => {
@@ -66,7 +90,7 @@ router.post('/', async (req, res) => {
 var transport = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
-  secure: true, // use SSL
+  secure: true,
   auth: {
     user: 'unpaidovertimecalculator@gmail.com',
     pass: process.env.PASS,

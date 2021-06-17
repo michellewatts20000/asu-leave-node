@@ -10,7 +10,7 @@
         How much leave is {{latestUser.name}} owed?<br>
         <span class="text-danger">{{numberWithCommas latestUser.annual}}</span> weeks of annual leave<br><span
           class="text-danger">{{numberWithCommas latestUser.personal}}</span> weeks of personal leave<br> <span
-          class="text-danger">{{numberWithCommas latestUser.long}}</span> weeks of long service leave.
+          class="text-danger">{{numberWithCommas latestUser.long}}</span> weeks of long service leave
       </h3>
     </div>
   </div>
@@ -53,18 +53,18 @@
 
   {{!-- <div class="row justify-content-md-center mb-5">
     <div class="col">
-      <button type="submit" onclick="myFunction()" class="btn btn-danger">See by industry</button>
+      <button type="submit" onclick="myFunction()" class="btn btn-danger">See by sector</button>
     </div>
   </div>
-  <div id="industry" class="row justify-content-md-center">
+  <div id="sector" class="row justify-content-md-center">
     <div class="col">
       {{#each users2 as | user |}}
       <div class="card mb-3">
-        <h5 class="card-header">{{industry}}</h5>
+        <h5 class="card-header">{{sector}}</h5>
         <div class="card-body">
-          <p class="card-title">Submissions: {{numberWithCommas total_submissions}}</p>
-          <p class="card-title">Unpaid Hours: {{numberWithCommas total_unpaid_hours}}</p>
-          <p class="card-title">Unpaid Salary: ${{numberWithCommas total_unpaid_salary}}</p>
+          <p class="card-title">Annual leave: {{numberWithCommas total_annual}}</p>
+          <p class="card-title">Personal leave: {{numberWithCommas total_personal}}</p>
+          <p class="card-title">Long service leave: ${{numberWithCommas total_long}}</p>
 
         </div>
       </div>
@@ -78,6 +78,7 @@
   <p class="text-white text-centre mt-5">If you are an admin you can login <a class="" href="/login">here</a></p>
   {{/if}} --}}
 
+  {{!--
   <script>
     function myFunction() {
       var x = document.getElementById("industry");
@@ -87,4 +88,4 @@
         x.style.display = "block";
       }
     }
-  </script>
+  </script> --}}
