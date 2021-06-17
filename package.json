@@ -20,6 +20,8 @@
     "nodemailer": "^6.6.1",
     "objects-to-csv": "^1.3.6",
     "sequelize": "^6.6.2",
+    "share-buttons": "^1.7.0",
+    "social-share-button": "^2.2.0",
     "validator": "^13.6.0"
   },
   "devDependencies": {

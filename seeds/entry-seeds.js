@@ -17,6 +17,7 @@ const entryData = [{
     long: 4.80,
   },
 
+
 ];
 
 const seedEntry = () => Entry.bulkCreate(entryData);

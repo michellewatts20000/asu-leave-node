@@ -43,11 +43,11 @@ router.post('/', async (req, res) => {
   });
 
   var mailOptions = {
-    from: '"Natalie Lang" <membership@asu.org.au>',
+    from: '"Natalie Lang" <mwatts@unionsnsw.org.au>',
     to: req.body.email,
     subject: 'Thanks for using the Workers Make the Difference calculator',
     text: `Hey ${req.body.name},`,
-    html: `<b>Hey ${req.body.name}! </b><br><br>You are owed ${req.body.personal.toFixed(2)} weeks of personal leave, ${req.body.annual} weeks of annual leave, and ${req.body.long} weeks of long service leave.<br><br>
+    html: `<b>Hey ${req.body.name}! </b><br><br>You are owed ${req.body.personal.toFixed(0)} weeks of personal leave, ${req.body.annual.toFixed(0)} weeks of annual leave, and ${req.body.long.toFixed(2)} weeks of long service leave.<br><br>
      
       Thank you for the work you do. Your work is essential, and you make the difference in people’ s lives. But if you have never had long service leave – you are missing out.<br>
 
@@ -87,14 +87,45 @@ router.post('/', async (req, res) => {
   });
 });
 
+// var transport = nodemailer.createTransport({
+//   host: 'smtp.gmail.com',
+//   port: 465,
+//   secure: true,
+//   auth: {
+//     user: 'unpaidovertimecalculator@gmail.com',
+//     pass: process.env.PASS,
+//   },
+// });
+
+
 var transport = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
-  auth: {
-    user: 'unpaidovertimecalculator@gmail.com',
-    pass: process.env.PASS,
+  host: "smtp-mail.outlook.com", // hostname
+  secureConnection: false, // TLS requires secureConnection to be false
+  port: 587, // port for secure SMTP
+  tls: {
+    ciphers: 'SSLv3'
   },
+  auth: {
+    user: 'mwatts@unionsnsw.org.au',
+    pass: process.env.PASS,
+  }
 });
+
+// var transport = nodemailer.createTransport({
+//   host: "smtp-mail.outlook.com",
+//   port: 587,
+//   secureConnection: false,
+//   auth: {
+//     user: "mwatts@unionsnsw.org.au",
+//     pass: process.env.PASS,
+//   },
+//   tls: {
+//     ciphers: 'SSLv3',
+//     // do not fail on invalid certs
+//     rejectUnauthorized: false
+//   }
+// });
+
+
 
 module.exports = router;
