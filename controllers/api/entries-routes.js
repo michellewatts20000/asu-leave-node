@@ -73,6 +73,7 @@ router.post('/', async (req, res) => {
      <li>Spread the word to keep up momentum. </li>
 
      <li>Ask your colleagues at work to do the same.</li>
+     </ol>
 
       Thanks,<br>
       Natalie Lang</b>
