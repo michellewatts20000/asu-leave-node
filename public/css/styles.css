@@ -6,6 +6,23 @@
   width: 300px;
 }
 
+.social a {
+  font-size: 40px;
+  margin-right: 10px;
+  list-style: none;
+  color: rgba(135, 190, 242, 0.5)
+}
+
+.social a:hover {
+  font-size: 40px;
+  margin-right: 10px;
+  list-style: none;
+  color: rgba(182, 209, 235, 0.5)
+}
+
+
+
+
 .container {
   background-color: #05294d;
 }
@@ -176,6 +193,7 @@ h3 {
 
   #footer {
     margin-bottom: 20px;
+    font-size: 10px;
   }
 
   .logo {

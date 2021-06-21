@@ -13,15 +13,21 @@
           class="text-danger">{{numberWithCommas latestUser.long}}</span> weeks of long service leave
       </h3>
 
-      <div class="addthis_inline_share_toolbox">
+
+      <p class="text-white mb-0">Share this calculator:</p>
+      <li class="social"><a target="_blank"
+          href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.findmyleave.com.au%2F"><i
+            class="fab fa-facebook-square"></i></a>
+
+        <a target="_blank" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.findmyleave.com.au%2F"><i
+            class="fab fa-twitter-square"></i></a>
+
+        <a target="_blank"
+          href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.findmyleave.com.au%2F"><i
+            class="fab fa-linkedin"></i></a>
+      </li>
 
 
-      </div>
-
-      {{!-- <div addthis:url="http://example.com">
-        <a class="addthis_button_email"></a>
-        <a class="addthis_button_print"></a>
-      </div> --}}
     </div>
   </div>
 
@@ -61,43 +67,6 @@
 
 
 
-  {{!-- <div class="row justify-content-md-center mb-5">
-    <div class="col">
-      <button type="submit" onclick="myFunction()" class="btn btn-danger">See by sector</button>
-    </div>
-  </div>
-  <div id="sector" class="row justify-content-md-center">
-    <div class="col">
-      {{#each users2 as | user |}}
-      <div class="card mb-3">
-        <h5 class="card-header">{{sector}}</h5>
-        <div class="card-body">
-          <p class="card-title">Annual leave: {{numberWithCommas total_annual}}</p>
-          <p class="card-title">Personal leave: {{numberWithCommas total_personal}}</p>
-          <p class="card-title">Long service leave: ${{numberWithCommas total_long}}</p>
 
-        </div>
-      </div>
-      {{/each}}
-    </div>
-  </div> --}}
-
-  {{!-- {{#if logged_in}}
-
-  {{else}}
-  <p class="text-white text-centre mt-5">If you are an admin you can login <a class="" href="/login">here</a></p>
-  {{/if}} --}}
-
-  {{!--
-  <script>
-    function myFunction() {
-      var x = document.getElementById("industry");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-  </script> --}}
 
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60cbca2e10f0ee50"></script>
