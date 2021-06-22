@@ -21,6 +21,11 @@
 }
 
 
+.fa-spinner {
+  color: white !important;
+  font-size: 20px !important;
+}
+
 
 #footer {
   font-size: 12px;

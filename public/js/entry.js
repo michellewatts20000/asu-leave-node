@@ -13,6 +13,7 @@ const entryFormHandler = async (personal, annual, long) => {
     'input[name="shiftOptions"]:checked'
   ).value;
 
+
   if (email && sector && years) {
     const response = await fetch('/api/entry', {
       method: 'POST',
@@ -53,6 +54,7 @@ const calculate = async () => {
   const email = document.querySelector('#email-entry').value.trim();
   const sector = document.querySelector('#sector-entry').value;
   const years = document.querySelector('#years').value;
+  // const submit = document.getElementById('custom_submit');
   const union = document.querySelector(
     'input[name="unionOptions"]:checked'
   ).value;
@@ -61,6 +63,10 @@ const calculate = async () => {
   ).value;
 
   event.preventDefault();
+
+  document.getElementById("custom_submit").innerHTML = `<i class="fas fa-spinner"></i>`;
+
+  // submit.textContent = `<i class="fas fa-spinner"></i>`;
 
   console.log(
     name,
