@@ -39,10 +39,10 @@
         from your sector <span class="text-danger">'{{numberWithCommas totals.sector}}'</span>
 
         and are owed a total of<br>
-        <span class="text-danger">{{numberWithCommas totals.total_annual}}</span>
-        weeks in annual leave<br>
-        <span class="text-danger">{{numberWithCommas totals.total_personal}}</span> weeks in personal leave<br>
-        <span class="text-danger">{{numberWithCommas totals.total_long}}</span> weeks in long service leave
+        <span class="text-danger">{{weeksToYears totals.total_annual}}</span>
+        years in annual leave<br>
+        <span class="text-danger">{{weeksToYears totals.total_personal}}</span> years in personal leave<br>
+        <span class="text-danger">{{weeksToYears totals.total_long}}</span> years in long service leave
       </h3>
     </div>
   </div>
@@ -55,11 +55,11 @@
         <span class="text-danger">{{numberWithCommas totalNumber}}</span> people have used this calculator and are owed
         a total of<br>
         {{#each users3 as | user |}}
-        <span class="text-danger">{{numberWithCommas user.total_annual}}</span> weeks in annual leave<br>
-        <span class="text-danger">{{ numberWithCommas user.total_personal
-          }}</span> weeks in personal leave<br>
-        <span class="text-danger">{{ numberWithCommas user.total_long
-          }}</span> weeks in long service leave
+        <span class="text-danger">{{ weeksToYears user.total_annual}}</span> years in annual leave<br>
+        <span class="text-danger">{{ weeksToYears user.total_personal
+          }}</span> years in personal leave<br>
+        <span class="text-danger">{{ weeksToYears user.total_long
+          }}</span> years in long service leave
         {{/each}}
       </h3>
     </div>
