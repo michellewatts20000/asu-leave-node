@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
   });
 
   var mailOptions = {
-    from: '"Natalie Lang" <mwatts@unionsnsw.org.au>',
+    from: '"Natalie Lang"',
     to: req.body.email,
     subject: 'Thanks for using the Workers Make the Difference calculator',
     text: `Hey ${req.body.name},`,
@@ -77,7 +77,8 @@ router.post('/', async (req, res) => {
 
       Thanks,<br>
       Natalie Lang</b>
-      Secretary - ASU`,
+      Secretary - ASU
+      </b>`,
   };
 
   transport.sendMail(mailOptions, (error, info) => {
@@ -87,17 +88,6 @@ router.post('/', async (req, res) => {
     console.log('Message sent: %s', info.messageId);
   });
 });
-
-// var transport = nodemailer.createTransport({
-//   host: 'smtp.gmail.com',
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: 'unpaidovertimecalculator@gmail.com',
-//     pass: process.env.PASS,
-//   },
-// });
-
 
 var transport = nodemailer.createTransport({
   host: "smtp-mail.outlook.com", // hostname
@@ -112,20 +102,6 @@ var transport = nodemailer.createTransport({
   }
 });
 
-// var transport = nodemailer.createTransport({
-//   host: "smtp-mail.outlook.com",
-//   port: 587,
-//   secureConnection: false,
-//   auth: {
-//     user: "mwatts@unionsnsw.org.au",
-//     pass: process.env.PASS,
-//   },
-//   tls: {
-//     ciphers: 'SSLv3',
-//     // do not fail on invalid certs
-//     rejectUnauthorized: false
-//   }
-// });
 
 
 
