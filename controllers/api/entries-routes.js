@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
   });
 
   var mailOptions = {
-    from: '"Natalie Lang" <membership@asu.org.au>',
+    from: 'Natalie Lang <membership@asu.org.au>',
     to: req.body.email,
     subject: 'Thanks for using the Workers Make the Difference calculator',
     text: `Hey ${req.body.name},`,
