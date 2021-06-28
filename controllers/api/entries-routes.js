@@ -97,7 +97,7 @@ var transport = nodemailer.createTransport({
     ciphers: 'SSLv3'
   },
   auth: {
-    user: 'mwatts@unionsnsw.org.au',
+    user: 'membership@asu.org.au',
     pass: process.env.PASS,
   }
 });
