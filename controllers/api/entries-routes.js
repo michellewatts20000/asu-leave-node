@@ -43,42 +43,80 @@ router.post('/', async (req, res) => {
   });
 
   var mailOptions = {
-    from: 'Natalie Lang <membership@asu.org.au>',
+    from: 'Natalie Lang – ASU <membership@asu.org.au>',
     to: req.body.email,
     subject: 'Thanks for using the Workers Make the Difference calculator',
     text: `Hey ${req.body.name},`,
-    html: `<b>Hey ${req.body.name}! </b><br><br>You are owed ${req.body.personal.toFixed(0)} weeks of personal leave, ${req.body.annual.toFixed(0)} weeks of annual leave, and ${req.body.long.toFixed(2)} weeks of long service leave.<br><br>
-     
-      Thank you for the work you do. Your work is essential, and you make the difference in people’ s lives. But if you have never had long service leave – you are missing out.<br>
+    html: `<font face="calibri">
+    <table style="width:600px">
 
-      The Australian Services Union is calling
-      for portable entitlements for all community and disability workers. We should have access to portable training, portable personal leave and portable long service leave. <br>
+        <tr>
+            <td>
+                <p><img src="https://actionnetwork.org/user_files/user_files/000/061/655/original/WMtD_emailBanner.png" width="600" height="200" alt="Workers make the difference email banner" /></p>
+            </td>
+        </tr>
 
-      If we had access to portable long service leave, it would mean:<br>
-<ul>
-      <li>access to well - earned breaks to recharge;</li>
-      <li>recognition for our experience and contribution to the sector; and</li>
-      <li>experienced workers could carry their leave with them to new providers and not go back to zero leave entitlements for doing the same work with the same communities.</li>
-</ul>
-      You deserve no less than the rights and entitlements of every other worker in the Australian economy.<br>
+        <tr>
+            <td style="padding: 10px;">
+                <p>Hey ${req.body.name}!</p>
+            </td>
+        </tr>
 
-      Nurses, teachers, cleaners and builders have portable long service leave. So do community and disability workers in Victoria, Queensland and the ACT.<br>
+        <tr>
+            <td bgcolor=#EC222B style="padding: 10px;">
+                <font size="+1" color="#FFFFFF">
+                    <p><b>You are owed ${req.body.personal.toFixed(2)} weeks of personal leave, ${req.body.annual} weeks
+                            of
+                            annual leave, and ${req.body.long} weeks of long service leave.</b></p>
+                </font>
+            </td>
+        </tr>
 
-      We can’ t afford to miss out. How can we fix this? <br>
 
-      <ol>
-      <li>Join the <a href="www.asu.asn.au/asujoin">Australian Services Union.</a>
-      Membership gives you access to advice, includes free journey insurance and professional indemnity insurance.</li>
+        <tr>
+            <td style="padding: 10px;">Thank you for the essential work that you do. As a front-line worker, you make a
+                difference in people’s lives.
 
-     <li>Spread the word to keep up momentum. </li>
+                <p><b>But if you have never had long service leave – you are missing out.</b></p>
 
-     <li>Ask your colleagues at work to do the same.</li>
-     </ol>
+                <p>Members of the Australian Services Union are campaigning for portable entitlements for all Community
+                    and
+                    Disability workers. You should have access to portable training, portable personal leave, and
+                    portable
+                    long service leave. This means that you would:</p>
 
-      Thanks,<br>
-      Natalie Lang</b>
-      Secretary - ASU
-      </b>`,
+                <ul>
+                    <li>get access to paid time off to recharge;</li>
+                    <li>be recognised for your experience and contribution to the sector; and</li>
+                    <li>carry your leave with you if you move to a new provider (not going back to zero leave
+                        entitlements
+                        for doing the same work, with the same communities).</li>
+                </ul>
+
+                <p>You deserve no less than the rights and entitlements of every other worker in Australia.</p>
+
+                <p>Nurses, teachers, cleaners, and builders have portable long service leave. So do Community and
+                    Disability
+                    workers in Victoria, Queensland, and the ACT.</p>
+
+                <p><b>You don’t deserve to miss out. How can we fix this?</b></p>
+
+                <ol>
+                    <li>Join the <a href="www.asu.asn.au/asujoin">Australian Services Union.</a> (Membership gives you
+                        access to workplace advice, includes free journey insurance, and professional indemnity
+                        insurance)
+                    </li>
+                    <li>Spread the word to keep up momentum.</li>
+                    <li>Ask your colleagues at work to do the same.</li>
+                </ol>
+
+                <p>Thanks,<br>
+                    Natalie Lang - ASU Secretary</p>
+
+            </td>
+        </tr>
+    </table>
+</font>`,
   };
 
   transport.sendMail(mailOptions, (error, info) => {
