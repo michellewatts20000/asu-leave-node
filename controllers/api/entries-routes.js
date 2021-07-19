@@ -65,7 +65,7 @@ router.post('/', async (req, res) => {
         <tr>
             <td bgcolor=#EC222B style="padding: 10px;">
                 <font size="+1" color="#FFFFFF">
-                    <p><b>You are owed ${req.body.personal.toFixed(2)} weeks of personal leave, ${req.body.annual} weeks
+                    <p><b>With portable entitlements you would have had access to ${req.body.personal.toFixed(2)} weeks of personal leave, ${req.body.annual} weeks
                             of
                             annual leave, and ${req.body.long} weeks of long service leave.</b></p>
                 </font>
@@ -107,7 +107,7 @@ router.post('/', async (req, res) => {
                         insurance)
                     </li>
                     <li>Spread the word to keep up momentum.</li>
-                    <li>Ask your colleagues at work to do the same.</li>
+                    <li>We can arrange a union meeting for your workplace to help get more people involved so together we can achieve portable leave for community workers.</li>
                 </ol>
 
                 <p>Thanks,<br>
