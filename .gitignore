@@ -108,3 +108,5 @@ dist
 
 # Env File
 .env
+
+/seeds

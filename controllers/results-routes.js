@@ -33,6 +33,8 @@ router.get('/:id', async (req, res) => {
     },
   });
 
+  console.log("latest entry", latestEntry)
+
   const userSumAll = await Entry.findAll({
     attributes: [
       [
@@ -77,7 +79,7 @@ router.get('/:id', async (req, res) => {
 
   const totalNumber = userData.length;
 
-  console.log(totals, latestEntry, users3);
+  console.log("latestUser", latestUser);
 
   res.render('results', {
     users,
