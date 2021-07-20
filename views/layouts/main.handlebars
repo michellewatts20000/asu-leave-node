@@ -14,7 +14,7 @@
     <meta property="og:title" content="You make a difference everyday and deserve to be valued for what you do." />
     <meta property="og:description"
         content="Every worker in the community and disability sector should have: regular support and training at work. Paid time off for holidays and breaks, including long service leave. Paid time off for when you are unwell or need to care for others. A secure job in community services, not fixed term contracts linked to funding cycles." />
-    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@asu_nsw_act">
     <meta name="twitter:title" content="You make a difference every day and deserve to be valued for what you do.">
@@ -59,7 +59,7 @@
     {{/if}}
 
     <script>
-        if ("serviceWorker" in navigator) {
+        if ("/serviceWorker" in navigator) {
             window.addEventListener("load", () => {
                 navigator.serviceWorker.register("service-worker.js").then(reg => {
                     console.log("We found your service worker file!", reg);
