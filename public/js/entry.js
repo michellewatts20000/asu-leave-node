@@ -64,7 +64,7 @@ const calculate = async () => {
 
   event.preventDefault();
 
-  document.getElementById("custom_submit").innerHTML = `<i class="fas fa-spinner"></i>`;
+  // document.getElementById("custom_submit").innerHTML = `<i class="fas fa-spinner"></i>`;
 
   // submit.textContent = `<i class="fas fa-spinner"></i>`;
 

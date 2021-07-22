@@ -19,6 +19,7 @@ self.addEventListener('install', event => {
         '/img/asu-fb-share.png',
         '/img/workersmakethediff-twitter.png',
         '/manifest.webmanifest',
+
       ]);
     })
   );
