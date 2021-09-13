@@ -46,6 +46,10 @@ router.post('/', async (req, res) => {
           "Union Membership Status": req.body.union,
           "Shift Worker": req.body.shift,
           "Employer": req.body.employer,
+          "Annual Leave": req.body.annual,
+          "Personal Leave": req.body.personal,
+          "Long Service Leave": req.body.long,
+          "Years worked": req.body.years
 
         }
       },
