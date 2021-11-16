@@ -55,11 +55,11 @@ Entry.init({
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  personal: {
+  annual: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  annual: {
+  personal: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
@@ -67,7 +67,6 @@ Entry.init({
     type: DataTypes.DECIMAL(4, 2),
     allowNull: false,
   },
-
   created_at: {
     type: DataTypes.DATE,
     allowNull: false,

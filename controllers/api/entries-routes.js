@@ -17,8 +17,8 @@ router.post('/', async (req, res) => {
     years,
     union,
     shift,
-    personal,
     annual,
+    personal,
     long
   } = req.body;
   console.log(req.body);

@@ -1,4 +1,4 @@
-const entryFormHandler = async (personal, annual, long) => {
+const entryFormHandler = async (annual, personal, long) => {
   const name = document.querySelector('#name-entry').value.trim();
   const phone = document.querySelector('#phone-entry').value.trim();
   const post = document.querySelector('#post-entry').value.trim();
@@ -27,8 +27,8 @@ const entryFormHandler = async (personal, annual, long) => {
         years,
         union,
         shift,
-        personal,
         annual,
+        personal,
         long
 
       }),
