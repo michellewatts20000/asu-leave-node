@@ -82,15 +82,15 @@ const calculate = async () => {
 
 
   if (shift === "noshift") {
-    let annual = years * 2;
-    let personal = years * 10;
+    let annual = years * 4;
+    let personal = years * 2;
     let long = years * 0.8;
     return entryFormHandler(
       annual, personal, long
     );
   } else {
-    let annual = (years * 2) + 1;
-    let personal = years * 10;
+    let annual = (years * 4) + 1;
+    let personal = years * 2;
     let long = years * 0.8;
     return entryFormHandler(
       annual, personal, long
