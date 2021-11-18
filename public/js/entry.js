@@ -89,7 +89,7 @@ const calculate = async () => {
       annual, personal, long
     );
   } else {
-    let annual = (years * 4) + 1;
+    let annual = years * 5;
     let personal = years * 1.4;
     let long = years * 0.8;
     return entryFormHandler(
